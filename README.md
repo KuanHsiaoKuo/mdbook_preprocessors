@@ -1,3 +1,5 @@
+# git tag与git commit没有关系
+
 ```shell
 git tag -d <mdbook version> # 删除本地指定标签
 git show-ref --tag | awk '{print ":" $2}' | xargs git push origin # 删除远程所有标签
