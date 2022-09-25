@@ -1,5 +1,14 @@
 # git tag与git commit没有关系
 
+## 发布新标签
+
+```shell
+sh reset_tag.sh
+git push --tag
+```
+
+## 标签说明
+
 ```shell
 git tag -d <mdbook version> # 删除本地指定标签
 git show-ref --tag | awk '{print ":" $2}' | xargs git push origin # 删除远程所有标签
@@ -16,3 +25,4 @@ git push --tag
 - git push <remote> <tag_name>：推送某个标签到远程仓库。
 - git push <remote> --tags：推送所有标签到远程仓库。
 - git push <remote> --delete <tag_name>：删除远程仓库中的某个标签。
+
